@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto;
 }
 html {
   font-size: 62.5%;
@@ -17,6 +18,41 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+/* 
+  Test Container
+*/
+.container-new {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+[class^="box-"] {
+  background-color: skyblue;
+
+  /* To place the letter at the center */
+  /* display: grid;
+  place-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.box {
+  background-color: skyblue;
+}
+
+/* 
+  END Test Container
+*/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100px; */
 }
 
 /* Navbar */
@@ -51,8 +87,54 @@ a {
 .nav-links a {
   font-size: 2rem;
 }
+
+.nav-links a:hover {
+  color: brown;
+}
 /* Header */
 
 .logo {
   width: 12rem;
+}
+
+/* 
+  Store
+*/
+
+.container-store {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+}
+
+/* 
+  Product List
+*/
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 
+  Product Item 
+*/
+
+.product-item {
+  display: flex;
+  flex-flow: column;
+  background-color: skyblue;
+
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  /* gap: 5rem; */
+  /* gap: 20rem; */
+}
+
+.product-img {
+  width: 10rem;
 }

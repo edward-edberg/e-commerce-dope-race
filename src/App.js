@@ -4,8 +4,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getCartItems } from "./features/cart/cartSlice";
 
 function App() {
+  const { cartItems, isLoading } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+  console.log(isLoading, cartItems);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
   return (
     <Router>
       <Navbar />
