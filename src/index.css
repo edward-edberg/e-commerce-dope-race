@@ -138,3 +138,12 @@ a {
 .product-img {
   width: 10rem;
 }
+
+/* 
+  Checkout
+*/
+
+.container-checkout {
+  flex-direction: column;
+  gap: 5rem;
+}

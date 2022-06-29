@@ -7,6 +7,7 @@ import Store from "./pages/Store";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCartItems } from "./features/cart/cartSlice";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const { cartItems, isLoading } = useSelector((store) => store.cart);
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   );
